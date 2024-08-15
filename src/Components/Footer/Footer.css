@@ -1,0 +1,94 @@
+.footer-outer {
+    background-color: black;
+    padding: 2rem 0;
+    margin-top: 0;
+  }
+  
+  .footer-cont {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+  }
+  
+  .line {
+    width: 70%;
+    text-align: center;
+    border-top: 1px solid grey;
+    margin: 1% 15%;
+  }
+  
+  .logo-slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 35%;
+    margin-top: 0; }
+  
+  .logo-slogan > img {
+    height: 6rem;
+    width: 15rem;
+    object-fit: contain;
+  }
+  
+  .logo-slogan > h5 {
+    margin-left: 3%;
+    color: red;
+  }
+  
+  .footer-about,
+  .footer-support,
+  .footer-faq {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 1rem;
+    margin-top: 4rem;
+    font-weight: 700;
+  }
+  
+  .footer-about > a,
+  .footer-support > a,
+  .footer-faq > a {
+    text-decoration: none;
+    color: rgb(135, 3, 3);
+    transition: color 0.3s;
+  }
+
+  .footer-about > a:hover,
+  .footer-support > a:hover,
+  .footer-faq > a:hover{
+    color: rgb(241, 101, 101);
+  }
+  
+
+
+  .footer-social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .footer-social-links > a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .footer-social-links > a:hover {
+    color: rgb(158, 0, 0);
+  }
+  
+  .footer-social-links > a > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+  }
+
+  h4{
+   color: rgb(255, 255, 255);
+   text-align: center;
+   margin-bottom: 0;  
+  }
+  

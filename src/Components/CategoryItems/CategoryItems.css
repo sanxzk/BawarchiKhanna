@@ -1,0 +1,64 @@
+/* CategoryPage.css */
+
+.category-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* CategoryItems.css */
+  
+  .category-items-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(17% - 1rem); /* Ensure minimum of 3 items per row */
+  }
+  
+  .category-items-cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-items-cards > img {
+    width: 100%;
+    height: 7rem;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .category-items-cards:hover > img {
+    transform: scale(1.05);
+  }
+  
+  .category-items-cards > p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .category-items-cards > button {
+    width: 47%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .category-items-cards > button:hover {
+    background-color: #ff4500;
+  }
+  

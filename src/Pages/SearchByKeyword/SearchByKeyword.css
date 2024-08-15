@@ -1,0 +1,35 @@
+ 
+
+.searchKeyword-outer-container {
+    color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .searchKeyword-outer-container>h1{
+    color: #cd0808;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.893);
+  font-weight: 600;
+  font-size: 2.15rem;
+  letter-spacing: 1px;
+    margin-bottom: 5%;
+  }
+  
+  .searchKeyword-outer-container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/searchkeyword.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0.25);
+    z-index: -1;
+  }

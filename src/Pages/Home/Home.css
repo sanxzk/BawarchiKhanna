@@ -1,0 +1,23 @@
+ .home-body {
+   /* background: rgb(38,1,14);
+   background: linear-gradient(90deg, rgba(38,1,14,0.9865196078431373) 70%, rgba(145,6,41,0.9893207282913166) 100%); */
+   color: white; 
+   position: relative;
+ 
+ } 
+ 
+  .home-body::before {
+   content: "";
+   position: fixed;  
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url('../../assets/background.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   filter: brightness(0.25);
+   z-index: -1;
+ }
+ 

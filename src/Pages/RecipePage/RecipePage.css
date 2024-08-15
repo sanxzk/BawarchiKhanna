@@ -1,0 +1,151 @@
+ .recipe-page>h1{
+  color: #cd0808;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.893);
+  font-weight: 600;
+  font-size: 2.15rem;
+  letter-spacing: 1px;
+}
+
+
+.recipe-page {
+  color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.recipe-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/recipePage.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.25);
+  z-index: -1;
+}
+
+
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.recipe-img-ingredient-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-img {
+  width: 25%;
+  object-fit: cover;
+  margin: 2rem 15rem 2rem 2rem;
+  border-radius: 5%;
+}
+
+.ingredients-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center the ingredients table horizontally */
+}
+
+.ingredients-section>h2{
+   color: rgb(150, 14, 14);
+}
+
+.ingredients-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the ingredients table horizontally */
+  width: 100%; /* Adjust the width as needed */
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.ingredients-table td {
+  border: 1px solid transparent;
+  padding: 0.5rem 1.5rem;
+  gap: 2rem;
+  text-align: left;
+  border: 1px solid white;
+}
+
+.see-more-btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+  margin-top: 5%;
+  background-color: rgba(0, 0, 0, 0.651);
+  color: rgba(255, 1, 1, 0.863);
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: border 0.2s ease-in-out;
+}
+
+.see-more-btn:hover{
+  border: 1px solid red;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparent blur effect */
+  backdrop-filter: blur(10px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.all-ingredients {
+  background: rgb(2, 2, 2);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Table occupies 50% of the width */
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.all-ingredients>h2{
+  color: red;
+}
+
+.instructions-section {
+  line-height: 1.25rem;
+ text-align: left;
+ width: 75%;
+  margin-top: 2%;
+}
+
+.instructions-section > h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(150, 14, 14);
+}
+
+.instructions-section>ol>li{
+ margin: 1rem 0;
+ transition: color 0.2s ease-in;
+}
+
+.instructions-section>ol>li:hover{
+  color: red;
+ }

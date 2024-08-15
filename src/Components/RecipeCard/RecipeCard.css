@@ -1,0 +1,68 @@
+/* RecipeCard.css */
+
+.recipecard-container {
+  background-color: rgba(46, 45, 45, 0.219);
+  width: 100%;
+  max-width: 300px;
+  margin: 0 20px;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative; /* Add this line to enable positioning */
+}
+
+.recipecard-container > img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipecard-name {
+  background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+  color: white; /* Set text color to white */
+  padding: 10px;
+  position: absolute; /* Add this line to enable positioning */
+  top: 50%; /* Position the name at the middle of the image */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the name horizontally and vertically */
+  width: 100%; /* Make the name span the entire width of the card */
+  text-align: center; /* Center the text */
+  box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.recipecard-name > h4 {
+  margin: 0;
+}
+
+.recipecard-name > p {
+  color: rgb(141, 139, 139);
+  margin: 5px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-height: 60px;
+  overflow: hidden;
+}
+
+.recipecard-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.recipecard-button > p {
+  color: rgb(210, 208, 208);
+  font-size: 0.65rem;
+  margin-left: 7px;
+  margin-bottom: 4px;
+}
+
+.recipecard-button > button {
+  width: 25%;
+  padding: 6px;
+  background-color: rgb(255, 22, 22);
+  color: rgb(255, 255, 255);
+  font-size: 0.75rem;
+  border: 2px solid red;
+  margin: 5px 10px 10px 0;
+  border-radius: 15px;
+}
