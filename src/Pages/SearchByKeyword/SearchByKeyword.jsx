@@ -28,7 +28,7 @@ const SearchByKeyword = () => {
             SearchedRecipes.map((item) => (
             <CategoryItems key={item.idMeal} item={item} />
           ))}
-        {status === "failed" && <div>{error}</div>}
+        {status === "failed" && <div>search failed, Try again</div>}
       </div>
     </div>
   )
