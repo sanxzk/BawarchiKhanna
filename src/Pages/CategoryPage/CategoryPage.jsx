@@ -24,10 +24,8 @@ const CategoryPage = () => {
 
   // Sending the command for API call
   useEffect(() => {
-    if (categoryStatus === "idle") {
       dispatch(fetchFoodCategories());
-    }
-  }, [categoryStatus, dispatch]);
+  }, [dispatch]);
 
   const handleCategoryClick = (categoryStr) => {
     dispatch(fetchCategoryItems(categoryStr));

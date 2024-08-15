@@ -4,6 +4,7 @@ import { Receipt } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addSavedRecipes, removeSavedRecipes } from "../../Store/CategoryFoodSlice";
+import toast from "react-hot-toast";
 
 const RecipeCard = ({ recipe }) => {
   const navigate = useNavigate();
@@ -24,12 +25,15 @@ const RecipeCard = ({ recipe }) => {
   const saveRecipeHandler = () => {
     if (recipe !== null) {
       dispatch(addSavedRecipes(recipe));
+      toast.success('Recipe saved successfully');
     }
   };
   
   const removeRecipeHandler = () => {
     if (recipe !== null) {
       dispatch(removeSavedRecipes(recipe));
+      toast.error('Recipe removed');
+
     }
   };
 

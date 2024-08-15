@@ -8,6 +8,7 @@ import {
   fetchRecipesById,
   removeSavedRecipes,
 } from "../../Store/CategoryFoodSlice";
+import toast from "react-hot-toast";
 
 const formatDate = (date) => {
   const d = new Date(date);
@@ -56,6 +57,7 @@ const RecipePage = () => {
         mealDate: formatDate(Date()),
       };
       dispatch(addSavedRecipes(savedElem));
+      toast.success('Recipe saved successfully');
     }
   };
 
@@ -68,6 +70,7 @@ const RecipePage = () => {
         mealDate: formatDate(Date()),
       };
       dispatch(removeSavedRecipes(savedElem));
+      toast.error('Recipe removed');
     }
   };
 

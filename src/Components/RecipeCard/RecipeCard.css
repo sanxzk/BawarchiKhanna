@@ -51,13 +51,13 @@
 
 .recipecard-button > p {
   color: rgb(210, 208, 208);
-  font-size: 0.65rem;
+  font-size: 0.55rem;
   margin-left: 7px;
   margin-bottom: 4px;
 }
 
 .recipecard-button > button {
-  width: 25%;
+  width: 32%;
   padding: 6px;
   background-color: rgb(255, 22, 22);
   color: rgb(255, 255, 255);

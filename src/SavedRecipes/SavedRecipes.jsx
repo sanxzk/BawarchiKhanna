@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './SavedRecipes.css';
 import { useSelector } from 'react-redux';
 import RecipeCard from '../Components/RecipeCard/RecipeCard';
 
