@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./RecipeCard.css";
-import { Receipt } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addSavedRecipes, removeSavedRecipes } from "../../Store/CategoryFoodSlice";
@@ -13,33 +12,31 @@ const RecipeCard = ({ recipe }) => {
   const SaveRecipes = useSelector((state) => state.CategorySlice.SaveRecipes);
 
   const [isSaved, setIsSaved] = useState(false);
+
   useEffect(() => {
-    for (let i = 0; i < SaveRecipes.length; i++) {
-      if (SaveRecipes[i].mealId === recipe.mealId) {
-        setIsSaved(true);
-        break;
-      }
-    }
-  }, []);
+    const isRecipeSaved = SaveRecipes.some(savedRecipe => savedRecipe.mealId === recipe.mealId);
+    setIsSaved(isRecipeSaved);
+  }, [SaveRecipes, recipe.mealId]);
 
   const saveRecipeHandler = () => {
     if (recipe !== null) {
       dispatch(addSavedRecipes(recipe));
       toast.success('Recipe saved successfully');
+      setIsSaved(true);
     }
   };
-  
+
   const removeRecipeHandler = () => {
     if (recipe !== null) {
       dispatch(removeSavedRecipes(recipe));
       toast.error('Recipe removed');
-
+      setIsSaved(false);
     }
   };
 
   return (
     <div className="recipecard-container">
-      <img src={recipe.mealImg} />
+      <img src={recipe.mealImg} alt={recipe.mealTitle} />
       <div className="recipecard-name">
         <h4>{recipe.mealTitle}</h4>
       </div>
@@ -52,12 +49,12 @@ const RecipeCard = ({ recipe }) => {
             navigate(`/recipePage?id=${recipe.mealId}`);
           }}
         >
-          recipe
+          Recipe
         </button>
         {isSaved ? (
           <button onClick={removeRecipeHandler}>Remove Recipe</button>
         ) : (
-          <button onClick={saveRecipeHandler}>Save recipe</button>
+          <button onClick={saveRecipeHandler}>Save Recipe</button>
         )}
       </div>
     </div>
