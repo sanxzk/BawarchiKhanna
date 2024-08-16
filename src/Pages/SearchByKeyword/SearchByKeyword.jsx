@@ -36,17 +36,4 @@ const SearchByKeyword = () => {
 
 export default SearchByKeyword
 
-// item
-// {
-//   strMeal: 'Apam balik',
-//   strMealThumb: 'https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg',
-//   idMeal: '53049'
-// },
  
-// recipe
-// {
-//   mealTitle: 'Christmas cake',
-//   mealImg: 'https://www.themealdb.com/images/media/meals/ldnrm91576791881.jpg',
-//   mealId: '52990',
-//   mealDate: '15/08/2024'
-// },

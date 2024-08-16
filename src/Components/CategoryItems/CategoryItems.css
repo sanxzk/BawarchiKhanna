@@ -1,64 +1,87 @@
-/* CategoryPage.css */
+ .category-items-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+   width: 21%; /* Adjust width as needed */
+  margin: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem; /* Border radius in rem */
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  /* flex: 1 1 calc(20% - 2rem);  */
+}
 
-.category-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  /* CategoryItems.css */
-  
+.category-items-cards:hover {
+  transform: translateY(-0.5rem); /* Subtle hover effect */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.category-items-cards > img {
+  width: 100%;
+  height: 10rem; /* Adjust height as needed */
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.category-items-cards:hover > img {
+  transform: scale(1.05);
+}
+
+.category-items-cards > p {
+  margin: 1rem 0;
+  font-size: 1rem; /* Adjust font size as needed */
+  font-weight: bold;
+  text-align: center; /* Center text */
+}
+
+.category-items-cards > button {
+  width: 70%;
+  margin-bottom: 0.5rem; /* Adjust margin as needed */
+  padding: 0.5rem;
+  border: none;
+  background-color: #ff6347;
+  color: white;
+  font-size: 0.875rem; /* Adjust font size as needed */
+  border-radius: 0.5rem; /* Border radius in rem */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category-items-cards > button:hover {
+  background-color: #ff4500;
+}
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 768px) {
   .category-items-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1 1 calc(17% - 1rem); /* Ensure minimum of 3 items per row */
+    width: 16rem; /* Adjust width for smaller screens */
+    flex: 1 1 calc(45% - 1rem); /* Fit 2 items per row */
   }
-  
-  .category-items-cards:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .category-items-cards > img {
-    width: 100%;
-    height: 7rem;
-    object-fit: cover;
-    transition: transform 0.3s;
-  }
-  
-  .category-items-cards:hover > img {
-    transform: scale(1.05);
-  }
-  
+
   .category-items-cards > p {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
   }
-  
+
   .category-items-cards > button {
-    width: 47%;
-    margin-bottom: 1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    background-color: #ff6347;
-    color: white;
-    font-size: 0.75rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 0.75rem; /* Adjust font size for smaller screens */
   }
-  
-  .category-items-cards > button:hover {
-    background-color: #ff4500;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
+  .category-items-cards {
+    width: 28%; /* Adjust width to fit two items per line */
+    flex: 1 1 calc(50% - 1rem); /* Ensure two items per line */
   }
-  
+
+  .category-items-cards > p {
+    font-size: 0.75rem; /* Adjust font size for mobile screens */
+  }
+
+  .category-items-cards > button {
+    font-size: 0.625rem; /* Adjust font size for mobile screens */
+    width: 70%;
+  }
+}

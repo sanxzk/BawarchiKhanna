@@ -1,54 +1,88 @@
-/* RecipeHistory.css */
-
 .show-all {
-    background-color: rgba(32, 14, 14, 0.575);
-    margin: 80px 20px;
-    width: 97%;
-    border-radius: 10px;
+  background-color: rgba(32, 14, 14, 0.575);
+  margin: 5rem 2% 5rem 2%; /* Adjusted for responsiveness */
+  width: 96%; /* Adjusted for responsiveness */
+  border-radius: 0.5rem; /* Use rem for border radius */
+}
+
+.show-all > h2 {
+  color: #cd0808;
+  text-shadow: 1px 1px 0.2rem rgba(255, 255, 255, 0.893);
+  font-weight: 600;
+  font-size: 1.75rem; /* Adjusted font size for responsiveness */
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-bottom: 2rem; /* Adjusted margin for responsiveness */
+}
+
+.saved-recipes-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  width: 100%;
+  white-space: nowrap;
+  padding: 1rem 0; /* Added padding for better spacing */
+}
+
+.saved-recipes-container .recipecard-container {
+  flex: 0 0 auto;
+  width: 20rem; /* Adjusted width for better responsiveness */
+  margin: 1rem; /* Adjusted margin for responsiveness */
+}
+
+/* Scrollbar styling */
+.saved-recipes-container::-webkit-scrollbar {
+  height: 0.6rem; /* Adjusted height for responsiveness */
+}
+
+.saved-recipes-container::-webkit-scrollbar-track {
+  background: grey;
+}
+
+.saved-recipes-container::-webkit-scrollbar-thumb {
+  background: rgb(109, 11, 11);
+  border-radius: 0.6rem;
+  border: 0.1rem solid rgba(255, 255, 255, 0.632);
+}
+
+.saved-recipes-container::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+.saved-recipes-container::-webkit-scrollbar-corner {
+  background: grey;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .show-all {
+    margin: 3rem 1%; /* Adjusted for smaller screens */
   }
-  
+
   .show-all > h2 {
-    color: #cd0808;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.893);
-    font-weight: 600;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    text-align: center;
-  }                                   
-  
-  .saved-recipes-container {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    width: 100%;
-    white-space: nowrap;
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+    margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
   }
-  
+
   .saved-recipes-container .recipecard-container {
-    flex: 0 0 auto;
-    width: 25%;
-    margin: 60px 40px;
+    width: 18rem; /* Adjusted width for smaller screens */
+    margin: 0.5rem; /* Adjusted margin for smaller screens */
   }
-  
-  /* Scrollbar styling */
-  .saved-recipes-container::-webkit-scrollbar {
-    height: 6px;  
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+  .show-all {
+    margin: 2rem 0.5%; /* Adjusted for very small screens */
   }
-  
-  .saved-recipes-container::-webkit-scrollbar-track {
-    background: grey;  
+
+  .show-all > h2 {
+    font-size: 1.25rem; /* Adjusted font size for very small screens */
+    margin-bottom: 1rem; /* Adjusted margin for very small screens */
   }
-  
-  .saved-recipes-container::-webkit-scrollbar-thumb {
-    background: rgb(109, 11, 11); /* Color of the thumb (the draggable part) */
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.632); /* Creates padding around the thumb */
+
+  .saved-recipes-container .recipecard-container {
+    width: 15rem; /* Adjusted width for very small screens */
+    margin: 0.5rem; /* Adjusted margin for very small screens */
   }
-  
-  .saved-recipes-container::-webkit-scrollbar-thumb:hover {
-    background: black; /* Color of the thumb on hover */
-  }
-  
-  .saved-recipes-container::-webkit-scrollbar-corner {
-    background: grey; /* Background color of the bottom-right corner */
-  }
+}

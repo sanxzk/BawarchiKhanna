@@ -1,17 +1,21 @@
+/* CategoryTag.css */
+
 .category-tag {
   flex: 0 0 auto;
-  width: 200px;
-  margin-right: 10px;
+  width: 20%;
+  max-width: 12rem;
+  margin-right: 1rem;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.459);
   border-radius: 10%;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.active-tag{
-  margin-top: -15px;
-  border: 2px solid rgba(90, 18, 18, 0.63);
-  box-shadow: rgb(76, 19, 19) 0px 5px 20px 0px;
+.active-tag {
+  margin-top: -1.5rem;
+  border: 0.2rem solid rgba(90, 18, 18, 0.63);
+  box-shadow: rgb(76, 19, 19) 0rem 0.5rem 2rem 0rem;
 }
 
 .category-tag img {
@@ -25,7 +29,37 @@
   text-align: center;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.831);
-  font-size: large;
+  font-size: 1rem;
   margin: 0;
   padding-bottom: 1rem;
+}
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .category-tag {
+    width: 30%;
+    max-width: 10rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .category-tag {
+    width: 45%;
+    max-width: 8rem;
+    margin-right: 0.5rem;
+  }
+
+  .active-tag {
+    margin-top: -1rem;
+    border: 0.2rem solid rgba(90, 18, 18, 0.63);
+    box-shadow: rgb(76, 19, 19) 0rem 0.5rem 2rem 0rem;
+  }
+
+  .category-tag p {
+    font-size: 0.875rem;
+    padding-bottom: 0.75rem;
+  }
 }

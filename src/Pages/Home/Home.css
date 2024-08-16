@@ -1,23 +1,62 @@
- .home-body {
-   /* background: rgb(38,1,14);
-   background: linear-gradient(90deg, rgba(38,1,14,0.9865196078431373) 70%, rgba(145,6,41,0.9893207282913166) 100%); */
-   color: white; 
-   position: relative;
- 
- } 
- 
-  .home-body::before {
-   content: "";
-   position: fixed;  
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-image: url('../../assets/background.jpg');
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   filter: brightness(0.25);
-   z-index: -1;
- }
- 
+.home-body {
+  color: white;
+  /* position: relative; */
+  /* padding: 2rem;   */
+  box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+}
+
+.home-body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../assets/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0.25);
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-body {
+    padding: 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .home-body {
+    padding: 1rem; /* Further reduce padding */
+  }
+  
+  .home-body h1, .home-body h2, .home-body h3 {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .home-body {
+    padding: 0.5rem; /* Minimal padding for very small screens */
+  }
+  
+  .home-body h1, .home-body h2, .home-body h3 {
+    font-size: 1.25rem; /* Further reduce font size */
+  }
+  
+  /* Ensure child components are responsive */
+  .home-body > * {
+    width: 100%; /* Ensure child components take full width */
+    box-sizing: border-box;
+    margin: 0 auto; /* Center-align child components */
+  }
+  
+  .home-body > .random-recipe,
+  .home-body > .explore-category,
+  .home-body > .saved-recipes,
+  .home-body > .recipe-history {
+    margin-bottom: 2rem; /* Add margin between components */
+  }
+}

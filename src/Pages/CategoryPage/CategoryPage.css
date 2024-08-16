@@ -1,10 +1,15 @@
+/* CategoryPage.css */
+
 .category-page {
   color: white;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   overflow: hidden;
+  width: 100%;
 }
 
 .category-page::before {
@@ -26,30 +31,74 @@
   color: #cd0808;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.893);
   font-weight: 600;
-  font-size: 2.15rem;
-  letter-spacing: 1px;
+  font-size: 2rem; /* Adjusted to use rem */
+  letter-spacing: 0.1rem; /* Adjusted to use rem */
+  margin-bottom: 2rem; /* Adjusted to use rem */
 }
 
+/* Adjust the category tags parent container */
 .category-tag-parent {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 1rem;
+  margin-bottom: 4rem; /* Adjusted to use rem */
+  margin-top: 2rem; /* Adjusted to use rem */
   scrollbar-width: none;
   -ms-overflow-style: none;
-  margin-bottom: 80px;
-  margin-top: 30px;
-  /* position: fixed; */
 }
 
 .category-tag-parent::-webkit-scrollbar {
   display: none;
 }
 
-/* .category-items{
-  height: 32vh;
-  overflow-y: scroll;
-  padding-top: 80px;
+/* Adjustments for category items container */
+.category-items {
+  padding-top: 4rem; /* Adjusted to use rem */
 }
-  */
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .category-page > h1 {
+    font-size: 1.75rem; /* Adjusted to use rem */
+    letter-spacing: 0.08rem; /* Adjusted to use rem */
+  }
+
+  .category-tag-parent {
+    margin-bottom: 3rem; /* Adjusted to use rem */
+    margin-top: 1.5rem; /* Adjusted to use rem */
+  }
+
+  .category-items {
+    padding-top: 3rem; /* Adjusted to use rem */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .category-page > h1 {
+    font-size: 1.35rem; /* Adjusted to use rem */
+    letter-spacing: 0.05rem; /* Adjusted to use rem */
+  }
+
+  .category-tag-parent {
+    /* Ensure horizontal scrolling on mobile */
+    flex-direction: row; /* Ensure horizontal alignment */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    margin-bottom: 2rem; /* Adjusted to use rem */
+    margin-top: 1rem; /* Adjusted to use rem */
+    scrollbar-width: thin; /* Thin scrollbar for better UI */
+  }
+
+  .category-tag-parent::-webkit-scrollbar {
+    height: 6px; /* Height for the horizontal scrollbar on mobile */
+  }
+
+  .category-items {
+    padding-top: 2rem; /* Adjusted to use rem */
+  }
+}
