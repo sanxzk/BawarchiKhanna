@@ -7,7 +7,7 @@
     align-items: center;
     flex-wrap: wrap;
     background: linear-gradient(109.6deg, rgb(0,0,0) 11.2%, rgb(49, 14, 14) 51.2%, rgb(0, 0, 0) 98.6%);
-    /* margin: 1rem; */
+    padding: 0.5rem;
   }
   
   .nav-box > img {
