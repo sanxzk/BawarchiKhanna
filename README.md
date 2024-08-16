@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# BawarchiKhana 
+### A Food Exploration Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An application to find food recipes according to the search category. This application can be used for saving favourite recipes.
 
-## Available Scripts
+## Demo Link
 
-In the project directory, you can run:
+Visit the [BawarchiKhana Demo](https://bawarchi-khanna.vercel.app/) to see the application in action.
 
-### `npm start`
+## Basic Outline
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [x] search for various recipes by a keyword
+- [x] save favourite recipes 
+- [x] store previous history
+- [x] explore different varieties of foods and recipes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technology Used
 
-### `npm test`
+- [x] React
+- [x] Redux Toolkit and React Redux (for state management)
+- [x] CSS
+- [x] LocalStorage (as database)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Steps to Launch the Code and Demo
 
-### `npm run build`
+1. Clone the repository.
+2. Run `npm install` to install all dependencies.
+3. Run `npm start` to start the application.
+4. Open your browser and go to `http://localhost:3000/` to view the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
+<style>
+  .mobile-container, .tablet-container, .web-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .mobile-container>div{
+     width: 25%; 
+  }
+  .tablet-container>div, .web-container>div{
+    width: 40%;
+    }
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  .gallery-item {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+  }
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>
 
-### `npm run eject`
+### Mobile View
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<div class="mobile-container">
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_1.jpg" alt="Mobile View 1">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_2.jpg" alt="Mobile View 2">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_3.jpg" alt="Mobile View 3">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_4.jpg" alt="Mobile View 4">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_5.jpg" alt="Mobile View 5">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_6.jpg" alt="Mobile View 6">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_7.jpg" alt="Mobile View 7">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_8.jpg" alt="Mobile View 8">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_9.jpg" alt="Mobile View 9">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_10.jpg" alt="Mobile View 10">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/PH_11.jpg" alt="Mobile View 10">
+  </div>
+</div>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<hr style="margin: 30px 0;">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Tablet View
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<div class="tablet-container">
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/TB_1.png" alt="Tablet View 1">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/TB_2.png" alt="Tablet View 2">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/TB_3.png" alt="Tablet View 3">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/TB_4.png" alt="Tablet View 3">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/TB_5.png" alt="Tablet View 3">
+  </div>
+</div>
 
-## Learn More
+<hr style="margin: 30px 0;">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Desktop View
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<div class="web-container">
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/LP_1.png" alt="Desktop View 1">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/LP_2.png" alt="Desktop View 2">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/LP_3.png" alt="Desktop View 3">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/LP_4.png" alt="Desktop View 4">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/LP_5.png" alt="Desktop View 5">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/LP_6.png" alt="Desktop View 6">
+  </div>
+  <div class="gallery-item">
+    <img src="./src/assets/Assets_Img/LP_7.png" alt="Desktop View 7">
+  </div>
+</div>
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is an overview of BawarchiKhana -'A Food Exploration Application', detailing its features, technologies used, how to launch the application, and screenshots showcasing its mobile, tablet, and desktop views.
