@@ -64,28 +64,30 @@
   
   /* Styles for mobile devices (max-width: 768px) */
   @media (max-width: 768px) {
+
     .nav-box {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
     }
   
     .nav-box > img {
-      width: 20%;
+      width: 25%;
     }
   
     .nav-box > div {
-      width: 100%;
-      margin-right: 0;
-      margin-top: 1rem;
+      width: 63%;
+      margin-top: 0.5rem;
     }
   
     .nav-box > div > input {
-      width: 70%;
+      width: 60%;
     }
   
     .nav-box > div > button {
-      padding: 0.5rem 0.5rem;
-      font-size: 0.85rem;
+      /* padding: 0.5rem 0.5rem; */
+      font-size: 0.80rem;
+      width: 3.75rem;
+      margin-right: 0;
     }
   }
   

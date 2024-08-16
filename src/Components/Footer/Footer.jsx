@@ -14,6 +14,7 @@ const Footer = () => {
             <h5>Dil Ka Rasta BAWARCHI KHANA Se<span style={{fontSize:'1.5rem'}}>&hearts;</span></h5>
       </div>
       
+      <div className='footer-links'> 
       <div className='footer-about'>
          <Link to='#'>ABOUT US</Link>
          <Link to='#'>CONTACT US</Link>
@@ -27,6 +28,7 @@ const Footer = () => {
       <div className='footer-faq'>
          <Link to='#'>FAQS</Link>
          <Link to='#'>SHOWCASE</Link>
+      </div>
       </div>
     </div>
     <div className='line'></div>

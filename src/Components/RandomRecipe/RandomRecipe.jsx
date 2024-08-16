@@ -22,15 +22,15 @@ const RandomRecipe = () => {
   if (RandomRecipe === null) return null;
 
   // Function to truncate description
-  const truncateDescription = (description, wordLimit) => {
-    if (typeof description !== 'string') return ''; // Return empty string if description is not a valid string
+  // const truncateDescription = (description, wordLimit) => {
+  //   if (typeof description !== 'string') return '';  
 
-    const words = description.split(' ');
-    if (words.length <= wordLimit) return description;
-    return words.slice(0, wordLimit).join(' ') + '...';
-  };
+  //   const words = description.split(' ');
+  //   if (words.length <= wordLimit) return description;
+  //   return words.slice(0, wordLimit).join(' ') + '...';
+  // };
 
-  console.log(RandomRecipe.strInstructions); // Debugging: check the value of strInstructions
+  // console.log(RandomRecipe.strInstructions);  
 
   return (
     <div className='home-auto-value'>
@@ -38,7 +38,7 @@ const RandomRecipe = () => {
       <img src={RandomRecipe.strMealThumb} alt={RandomRecipe.strMeal} className='home-paneer-img'/>
       <div className='home-desc'>
         <h1>{RandomRecipe.strMeal}</h1>
-        <span>{truncateDescription(RandomRecipe.strInstructions || '', 20)}</span>
+        {/* <span>{truncateDescription(RandomRecipe.strInstructions || '', 20)}</span> */}
         <button className='red-button' onClick={() => {
           navigate(`/recipePage/?id=${RandomRecipe.idMeal}`);
         }}>See more</button>
@@ -48,4 +48,4 @@ const RandomRecipe = () => {
   );
 };
 
-export default RandomRecipe;
+export default RandomRecipe

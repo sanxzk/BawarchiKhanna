@@ -28,12 +28,12 @@
   }
   
   .home-desc > h1 {
-    color: rgb(235, 228, 228);
+    color: rgb(242, 242, 242);
   }
   
-  .home-desc > span {
+  /* .home-desc > span {
     color: rgb(181, 177, 177);
-  }
+  } */
   
   .red-button {
     background-color: red;
@@ -76,6 +76,7 @@
       /* padding: 1.5rem; */
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
   
     .home-auto-value > img {
@@ -98,10 +99,11 @@
     }
   
     .red-button {
-      padding: 0.5rem 0.75rem;
+      /* padding: 0.5rem 0.75rem; */
       font-size: 0.9rem;
       align-items: center;
-      width: 50%;
+      width: 70%;
+      margin-left: 18%;
     }
   }
   

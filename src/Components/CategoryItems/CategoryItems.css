@@ -72,16 +72,17 @@
 /* Responsive design for mobile screens */
 @media (max-width: 480px) {
   .category-items-cards {
-    width: 28%; /* Adjust width to fit two items per line */
+    width: 28%;  
     flex: 1 1 calc(50% - 1rem); /* Ensure two items per line */
   }
 
   .category-items-cards > p {
-    font-size: 0.75rem; /* Adjust font size for mobile screens */
+    font-size: 1rem;  
   }
 
   .category-items-cards > button {
-    font-size: 0.625rem; /* Adjust font size for mobile screens */
+    font-size: 0.625rem;  
     width: 70%;
+    margin-left: 2% ;
   }
 }

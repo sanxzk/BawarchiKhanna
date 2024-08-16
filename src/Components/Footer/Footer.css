@@ -130,24 +130,34 @@ h4 {
 }
 
 /* Mobile Styles */
+
 @media (max-width: 768px) {
   .footer-about,
   .footer-support,
   .footer-faq {
-    width: 90%;
+    width: 30%;
   }
 
   .footer-links {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+  }
+   
+  .logo-slogan{
+    width: 100%; 
   }
 
-  .logo-slogan > img {
-    height: 4rem;
-    width: 10rem;
-  }
+.logo-slogan>img{
+  margin-left: 2% !important;
+  width: 9rem;
+}
 
   .logo-slogan > h5 {
     font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 }
