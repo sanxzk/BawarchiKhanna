@@ -9,6 +9,7 @@ import RecipePage from "./Pages/RecipePage/RecipePage";
 import SearchByKeyword from "./Pages/SearchByKeyword/SearchByKeyword";
 import { getHistory, getSavedRecipes } from "./Store/CategoryFoodSlice";
 import toast, { Toaster } from 'react-hot-toast';
+import Footer from "./Components/Footer/Footer";
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path="/searchByKeyword" element={<SearchByKeyword />} />
         </Routes>
         <Toaster />
+        <Footer/>
       </Router>
     </div>
   );

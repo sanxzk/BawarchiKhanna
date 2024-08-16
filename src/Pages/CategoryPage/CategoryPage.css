@@ -80,25 +80,26 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .category-page > h1 {
-    font-size: 1.35rem; /* Adjusted to use rem */
-    letter-spacing: 0.05rem; /* Adjusted to use rem */
+    font-size: 1.35rem;  
+    letter-spacing: 0.05rem;  
   }
 
   .category-tag-parent {
-    /* Ensure horizontal scrolling on mobile */
-    flex-direction: row; /* Ensure horizontal alignment */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical overflow */
-    margin-bottom: 2rem; /* Adjusted to use rem */
-    margin-top: 1rem; /* Adjusted to use rem */
-    scrollbar-width: thin; /* Thin scrollbar for better UI */
+     width: 100%;
+    flex-direction: row;  
+    overflow-x:scroll;  
+    overflow-y: hidden;  
+    margin-bottom: 2rem;  
+    margin-top: 1rem; 
+    scrollbar-width:thin;  
   }
 
   .category-tag-parent::-webkit-scrollbar {
-    height: 6px; /* Height for the horizontal scrollbar on mobile */
+    height: 6px; 
   }
 
   .category-items {
-    padding-top: 2rem; /* Adjusted to use rem */
+    padding-top: 2rem; 
+    margin-bottom: 7rem;
   }
 }

@@ -194,9 +194,14 @@
   .ingredients-section {
     width: 100%;
   }
+  
+ .ingredients-table{
+  width: 100%;
+ }
 
   .ingredients-table td {
-    padding: 0.5rem 0.25rem;
+    padding: 0.5rem 0.5rem;
+     
   }
 
   .see-more-btn {
@@ -210,6 +215,6 @@
   }
 
   .instructions-section {
-    width: 100%;
+    width: 90%;
   }
 }

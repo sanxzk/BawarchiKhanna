@@ -46,7 +46,7 @@ const Footer = () => {
           <FaLinkedinIn />
         </a>
       </div>
-      <h4>Created and Designed by <span style={{fontSize:'1.27rem', color:'red'}}>Sanjana &hearts;</span></h4>
+      <h4>Created and Designed by <Link to={"https://www.linkedin.com/in/sanjanasharma14/" }target="_blank" style={{textDecoration:"none"}}><span style={{fontSize:'1.27rem', color:'red'}}>Sanjana &hearts;</span></Link></h4>
        </div>
   )
 }

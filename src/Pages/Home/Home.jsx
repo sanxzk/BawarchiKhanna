@@ -17,7 +17,6 @@ const Home = () => {
        <ExploreCategory/>
        <SavedRecipes/>
       <RecipeHistory/>
-      <Footer/>
     </div>
   );
 };
